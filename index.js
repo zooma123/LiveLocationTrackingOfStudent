@@ -62,10 +62,10 @@ const socketHandler = (io) => {
 
   socket.on('location', async (data) => {
     try {
-        console.log("Before database query");
+        
         console.log("Hello")
         const user = await User.findOne({ Username: data.Username });
-        console.log("After database query");
+    
 
         if (!user) {
             console.log('User not found');
